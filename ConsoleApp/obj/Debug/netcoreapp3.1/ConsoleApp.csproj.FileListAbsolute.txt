@@ -1,0 +1,16 @@
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.deps.json
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.dll
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.pdb
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\GeneticAlgorithm.dll
+E:\AOIS\AOIS4\ConsoleApp\bin\Debug\netcoreapp3.1\GeneticAlgorithm.pdb
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csprojAssemblyReference.cache
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CopyComplete
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+E:\AOIS\AOIS4\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache
