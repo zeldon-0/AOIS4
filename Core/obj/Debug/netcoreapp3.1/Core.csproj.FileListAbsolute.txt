@@ -1,0 +1,14 @@
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\Core.dll
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\Core.pdb
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\Data.dll
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\GeneticAlgorithm.dll
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\Data.pdb
+E:\AOIS\AOIS4\Core\bin\Debug\netcoreapp3.1\GeneticAlgorithm.pdb
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.dll
+E:\AOIS\AOIS4\Core\obj\Debug\netcoreapp3.1\Core.pdb

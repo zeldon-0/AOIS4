@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticAlgorithm", "GeneticAlgorithm\GeneticAlgorithm.csproj", "{7BC86D20-FB2F-43A4-A882-5D4D5F757345}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneticAlgorithm", "GeneticAlgorithm\GeneticAlgorithm.csproj", "{7BC86D20-FB2F-43A4-A882-5D4D5F757345}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{CA17E787-214F-4FAC-8452-E23A8B439579}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{CA17E787-214F-4FAC-8452-E23A8B439579}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{4E9C775C-11D7-4515-A253-66D3C4EE8A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{C3B679CA-A2D2-4748-9F23-9E81EBB69533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{3A36F8E2-EE7F-4222-B065-0B3B4B194B53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{CA17E787-214F-4FAC-8452-E23A8B439579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA17E787-214F-4FAC-8452-E23A8B439579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA17E787-214F-4FAC-8452-E23A8B439579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9C775C-11D7-4515-A253-66D3C4EE8A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9C775C-11D7-4515-A253-66D3C4EE8A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9C775C-11D7-4515-A253-66D3C4EE8A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9C775C-11D7-4515-A253-66D3C4EE8A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B679CA-A2D2-4748-9F23-9E81EBB69533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B679CA-A2D2-4748-9F23-9E81EBB69533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B679CA-A2D2-4748-9F23-9E81EBB69533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B679CA-A2D2-4748-9F23-9E81EBB69533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A36F8E2-EE7F-4222-B065-0B3B4B194B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A36F8E2-EE7F-4222-B065-0B3B4B194B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A36F8E2-EE7F-4222-B065-0B3B4B194B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A36F8E2-EE7F-4222-B065-0B3B4B194B53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

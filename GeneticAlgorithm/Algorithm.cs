@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Data;
+using Data.Context;
 
 namespace GeneticAlgorithm
 {
@@ -64,48 +66,34 @@ namespace GeneticAlgorithm
         private int PopulationSize;
         private int Boundary;
         private double MutationProbability;
-        public Algorithm(int epochs, int populationSize, int boundary, 
-            double mutationProbability)
+        private ElectricityContext _context;
+        public Algorithm(ElectricityContext context, int epochs, 
+            int populationSize, double mutationProbability)
         {
+            _context = context;
+            Boundary = 77;
             Epochs = epochs;
             PopulationSize = populationSize;
-            Boundary = boundary;
             MutationProbability = mutationProbability;
             Population = new List<Individual>();
             GenerateInput();
         }
 
-        public void Search()
+        public int Search()
         {
             Populate();
             Population = SortPopulation(Population);
             for (int i = 0; i < Epochs; i++)
             {
-                /*Population = Population.OrderBy(i => i.Fitness).ToList();
-                List<Individual> offspring = new List<Individual>();
-                var parents = Population.Take(pairs * 2);
-                */
+
                 Console.WriteLine($"Epoch: {i}");
                 Console.WriteLine($"Best index: {Population[0].Index} Fitness: {Population[0].Fitness}");
                 ProduceOffspring(Population);
                 Population = SortPopulation(Population);
                
             }
-            Console.WriteLine($"Actual maximum: {Input.OrderByDescending(i => i).First()}");
-            /*
-            for (int genNum = 1; genNum < GenerationNumbers; ++genNum)
-            {
-                generation = GenerateNewGeneration(generation, true);
-                SortGeneration(generation);
-                Console.WriteLine("Лучшая особь = " + Weight(generation[0].Key));
-                Console.WriteLine("Generation " + genNum);
-            }
-            */
-            /*Console.WriteLine("x = " + GetX(generation[0].Key));
-            Console.WriteLine("y = " + GetY(generation[0].Key));
-            Console.WriteLine("Genome = {0:X}", generation[0].Key);
-            Console.Write("Press any key to continue . . . ");
-            */
+            Console.WriteLine($"Actual maximum: {_context.ElectricityUsages.OrderByDescending(i => i.Usage).First()}");
+            return Population[0].Index;
         }
         private void Populate()
         {
@@ -128,24 +116,10 @@ namespace GeneticAlgorithm
 
             }
         }
-        private double ApproximateFitness(double index)
-        {
-            double lowerIndex = (int)index;
-            double upperIndex = Math.Ceiling(index);
-            double lowerFitness = Input[(int)lowerIndex];
-            double upperFitness = Input[(int)upperIndex];
-            double interpolated = lowerFitness +
-                (index - lowerIndex) *
-                ((upperFitness - lowerFitness) /
-                 (upperIndex - lowerIndex)
-                );
-            return interpolated;
 
-        }
         private List<Individual> SortPopulation(List<Individual> generation)
         {
             var sortedGeneration = generation
-                //.Distinct()
                 .GroupBy(i => i.Index)
                 .Select(g => g.First())
                 .OrderByDescending(i => i.Fitness)
@@ -188,7 +162,10 @@ namespace GeneticAlgorithm
         {
             if (index >=0 && index < Input.Length)
             {
-                return Input[index];
+                //return Input[index];
+                return (double)_context.ElectricityUsages
+                    .FirstOrDefault(u => u.Id - 1 == index)
+                    .Usage;
             }
             return 0;
         }

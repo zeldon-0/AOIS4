@@ -13,12 +13,6 @@ namespace GeneticAlgorithm
             Index = index;
             Fitness = fitness;
         }
-        public override bool Equals(object obj)
-        {
-            Individual toCompare = obj as Individual;
-            if (toCompare != null)
-                return this.Index == toCompare.Index;
-            return false;
-        }
+
     }
 }

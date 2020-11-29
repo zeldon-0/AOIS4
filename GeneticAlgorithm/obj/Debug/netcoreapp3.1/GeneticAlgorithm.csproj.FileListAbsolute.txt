@@ -7,3 +7,6 @@ E:\AOIS\AOIS4\GeneticAlgorithm\obj\Debug\netcoreapp3.1\GeneticAlgorithm.Assembly
 E:\AOIS\AOIS4\GeneticAlgorithm\obj\Debug\netcoreapp3.1\GeneticAlgorithm.csproj.CoreCompileInputs.cache
 E:\AOIS\AOIS4\GeneticAlgorithm\obj\Debug\netcoreapp3.1\GeneticAlgorithm.dll
 E:\AOIS\AOIS4\GeneticAlgorithm\obj\Debug\netcoreapp3.1\GeneticAlgorithm.pdb
+E:\AOIS\AOIS4\GeneticAlgorithm\bin\Debug\netcoreapp3.1\Data.dll
+E:\AOIS\AOIS4\GeneticAlgorithm\bin\Debug\netcoreapp3.1\Data.pdb
+E:\AOIS\AOIS4\GeneticAlgorithm\obj\Debug\netcoreapp3.1\GeneticAlgorithm.csproj.CopyComplete
