@@ -25,11 +25,18 @@ namespace API.Controllers
             _searchService = searchService;
         }
         [HttpPost]
-        public IActionResult GetSolution(SearchRequest request)
+        public IActionResult SearchForElectricityUsage(SearchRequest request)
         {
             ElectricityUsage usage =
                 _searchService.GetBiggestElectricityUsage(request);
             return Ok(usage);
+        }
+        [HttpPost]
+        public IActionResult SearchForIncome(SearchRequest request)
+        {
+            Income income =
+                _searchService.GetBiggestIncome(request);
+            return Ok(income);
         }
 
     }

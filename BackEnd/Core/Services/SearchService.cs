@@ -19,13 +19,26 @@ namespace Core.Services
         }
         public ElectricityUsage GetBiggestElectricityUsage(SearchRequest request)
         {
-            Algorithm algorithm = new Algorithm(_context, request.Epochs,
+            Algorithm<ElectricityUsage> algorithm = 
+                new Algorithm<ElectricityUsage>(_context.ElectricityUsages, request.Epochs,
                 request.PopulationSize, request.MutationProbability);
             int index = algorithm.Search();
             ElectricityUsage usage = _context
                 .ElectricityUsages
                 .FirstOrDefault(u => u.Id - 1 == index);
             return usage;
+        }
+
+        public Income GetBiggestIncome(SearchRequest request)
+        {
+            Algorithm<Income> algorithm =
+                new Algorithm<Income>(_context.Incomes, request.Epochs,
+                request.PopulationSize, request.MutationProbability);
+            int index = algorithm.Search();
+            Income income = _context
+                .Incomes
+                .FirstOrDefault(u => u.CommunityAreaNumber - 1 == index);
+            return income;
         }
     }
 }

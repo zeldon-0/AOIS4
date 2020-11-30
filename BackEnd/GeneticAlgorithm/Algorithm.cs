@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using Data;
 using Data.Context;
+using Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GeneticAlgorithm
 {
     
-    public class Algorithm
+    public class Algorithm <T> where T: class, IEntity
     {
         public static double[] Input;/*{92.58450930592814,
             10.550795593555456,
@@ -66,12 +68,12 @@ namespace GeneticAlgorithm
         private int PopulationSize;
         private int Boundary;
         private double MutationProbability;
-        private ElectricityContext _context;
-        public Algorithm(ElectricityContext context, int epochs, 
+        private DbSet<T> _dbSet;
+        public Algorithm(DbSet<T> dbSet, int epochs, 
             int populationSize, double mutationProbability)
         {
-            _context = context;
-            Boundary = 77;
+            _dbSet = dbSet;
+            Boundary = _dbSet.Count();
             Epochs = epochs;
             PopulationSize = populationSize;
             MutationProbability = mutationProbability;
@@ -92,7 +94,7 @@ namespace GeneticAlgorithm
                 Population = SortPopulation(Population);
                
             }
-            Console.WriteLine($"Actual maximum: {_context.ElectricityUsages.OrderByDescending(i => i.Usage).First()}");
+            Console.WriteLine($"Actual maximum: {_dbSet.ToList().OrderByDescending(i => i.Value).First()}");
             return Population[0].Index;
         }
         private void Populate()
@@ -163,9 +165,10 @@ namespace GeneticAlgorithm
             if (index >=0 && index < Input.Length)
             {
                 //return Input[index];
-                return (double)_context.ElectricityUsages
-                    .FirstOrDefault(u => u.Id - 1 == index)
-                    .Usage;
+                return _dbSet
+                    .ToList()
+                    .FirstOrDefault(u => u.Identifier - 1 == index)
+                    .Value;
             }
             return 0;
         }
