@@ -1,0 +1,54 @@
+
+
+<body class = "container">
+
+    <div class="col-sm-9 col-md-7 col-lg-4 mx-auto">
+        <div class = "container">
+            <button  [routerLink] = "['../income']" class="button orange" mat-stroked-button >Income</button>
+        </div>
+        <p class = "text">Please enter the number of epochs</p>
+            <mat-slider class = "offset"
+            thumbLabel
+            [displayWith]="formatLabel"
+            [(ngModel)]="epochs"
+            tickInterval="1"
+            min="1"
+            max="100"></mat-slider>
+          
+        <p class = "text">Please enter the population size</p>
+            <mat-slider class = "offset"
+            thumbLabel
+            [displayWith]="formatLabel"
+            [(ngModel)]="population"
+            tickInterval="1"
+            min="1"
+            max="100"></mat-slider>
+          
+        <p class = "text">Please enter the mutation probability</p>
+            <mat-slider class = "offset"
+            thumbLabel
+            [displayWith]="formatLabel"
+            [(ngModel)]="mutationProbability"
+            tickInterval="1"
+            min="0"
+            max="100"></mat-slider>
+          
+    </div>
+    <div class = "container">
+        <div class="col-sm-9 col-md-7 col-lg-3 mx-auto" >
+          <button (click)="search()" class="button" mat-stroked-button >Search</button>
+        </div>
+     </div>
+     
+    <div *ngIf = "electricityUsage" class="col-sm-9 col-md-7 col-lg-3 mx-auto" >
+        <div class = "wrapper">
+                <div class = "title">Area:</div>
+                <div class = "value">{{electricityUsage.area}} </div>
+
+        </div>
+        <div class = "wrapper">
+            <div class = "title">Actual usage:</div>
+            <div class = "value">{{electricityUsage.usage}} </div>
+        </div>
+    </div>
+</body>

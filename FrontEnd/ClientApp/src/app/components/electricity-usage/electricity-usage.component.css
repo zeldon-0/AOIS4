@@ -1,0 +1,40 @@
+.text{
+    text-align: center;
+}
+.offset{
+    margin-left: 100px;
+}
+.wrapper{
+    border-radius: 2px;
+    border-color: chocolate;
+    border-style: solid;
+    grid-template-areas: "title value";
+    grid-template-columns: 1fr auto;
+    display: grid;
+    background-color: cornsilk;
+    min-width: 270px;
+}
+.title{
+    grid-area: "title";
+    border: 0px;
+    border-right-width: 2px;
+    border-color: chocolate;
+    border-style: solid;
+    width: 120px;
+    text-align: center;
+
+}
+.value{
+    grid-area: "value";
+    text-align: center;
+    width: 150px;
+}
+
+.button{
+    margin-left: 32%;
+    margin-bottom: 30px;
+}
+.orange{
+    background-color: gold;
+    
+}
